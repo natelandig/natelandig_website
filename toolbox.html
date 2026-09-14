@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ultimate Custom Toolbox — Nathan Landig</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="toolbox.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div>NATHAN LANDIG / PORTFOLIO</div>
+
+        <a href="index.html">
+            BACK TO HOME ↗
+        </a>
+    </header>
+
+
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="index.html#projects">← &nbsp;ALL BUILDS</a>
+        </div>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="project-hero">
+
+            <!-- LEFT INFORMATION -->
+            <div class="project-info">
+
+                <div class="project-meta">
+                    01 / 2026 / 360 VIEW · ELECTRICAL
+                </div>
+
+                <h1>
+                    ULTIMATE<br>
+                    CUSTOM<br>
+                    TOOLBOX
+                </h1>
+
+                <p class="intro">
+                    I started with a normal toolbox. It quickly turned into
+                    a fully customized mobile workshop with integrated
+                    electrical components, dedicated storage, and a few
+                    extra features I wish every toolbox had.
+                </p>
+
+                <div class="project-specs">
+
+                    <div class="spec-row">
+                        <span>TIMEFRAME</span>
+                        <span>Mar 2026 – Aug 2026</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>TYPE</span>
+                        <span>Personal Project</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span>SKILLS</span>
+                        <span>
+                            Mechanical Design,<br>
+                            Electrical, 3D Printing,<br>
+                            Fabrication
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT 360 VIEW -->
+            <div class="viewer-column">
+
+                <div class="viewer-counter">
+                    <span>1</span> / 10
+                </div>
+
+                <div class="viewer-stage">
+
+                    <!-- Dedicated glow layers -->
+                    <div class="glow glow-orange"></div>
+                    <div class="glow glow-green"></div>
+
+                    <!-- Ground glow -->
+                    <div class="ground-glow"></div>
+
+                    <!-- Your 360 viewer -->
+                    <canvas id="viewer"></canvas>
+
+                    <!-- Fake ground ellipse -->
+                    <div class="ground-ring"></div>
+
+                    <div class="drag-label">
+                        DRAG TO ROTATE ↔
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="viewer-arrow viewer-prev" id="prev360">
+                        ←
+                    </button>
+
+                    <button class="viewer-arrow viewer-next" id="next360">
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- Featured project label -->
+                <a href="#details" class="viewer-project-label">
+
+                    <div>
+                        <span>
+                            01 / 2026 / 360 VIEW · ELECTRICAL
+                        </span>
+
+                        <strong>
+                            ULTIMATE CUSTOM TOOLBOX
+                        </strong>
+                    </div>
+
+                    <b>↗</b>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECT STORY
+        ====================================================== -->
+
+        <section id="details" class="story-grid">
+
+            <!-- 01 -->
+            <article class="story-block">
+
+                <div class="story-heading">
+                    <span>01</span>
+                    <h2>THE IDEA</h2>
+                </div>
+
+                <p>
+                    It started with a simple annoyance: a drill is one of
+                    the most important tools in a toolbox, but using one
+                    also means keeping track of a battery and a charger
+                    that inevitably end up somewhere else.
+                </p>
+
+                <p>
+                    I wanted to fix that by integrating a drill-battery
+                    charger directly into the toolbox.
+                </p>
+
+            </article>
+
+
+            <!-- 02 -->
+            <article class="story-block">
+
+                <div class="story-heading">
+                    <span>02</span>
+                    <h2>THE RABBIT HOLE</h2>
+                </div>
+
+                <p>
+                    Once the toolbox needed a power connection, I started
+                    asking what else could be integrated.
+                </p>
+
+                <ul>
+                    <li>Integrated drill battery charger</li>
+                    <li>Torsion-spring retractable power cable</li>
+                    <li>Integrated front power strip</li>
+                    <li>Dimmable LED lighting</li>
+                </ul>
+
+                <p>
+                    Each feature solved a problem — and created a new one
+                    to solve.
+                </p>
+
+            </article>
+
+
+            <!-- 03 -->
+            <article class="story-block">
+
+                <div class="story-heading">
+                    <span>03</span>
+                    <h2>THE DETAILS</h2>
+                </div>
+
+                <p>
+                    Dedicated storage keeps the tools I use most often
+                    immediately accessible.
+                </p>
+
+                <ul>
+                    <li>Removable drill-bit case</li>
+                    <li>Soldering iron + supplies</li>
+                    <li>Drawing and cutting tools</li>
+                    <li>Multimeter</li>
+                    <li>Adhesives, tapes & fasteners</li>
+                </ul>
+
+                <p>
+                    The lid also mounts a measuring tape, knife, caliper,
+                    and ruler for quick access.
+                </p>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SECONDARY DETAIL STRIP
+        ====================================================== -->
+
+        <section class="detail-strip">
+
+            <div class="detail-stat">
+                <strong>40+</strong>
+                <span>
+                    CUSTOM 3D PRINTED<br>
+                    COMPONENTS
+                </span>
+            </div>
+
+            <div class="detail-stat">
+                <strong>1</strong>
+                <span>
+                    RETRACTABLE<br>
+                    POWER CABLE
+                </span>
+            </div>
+
+            <div class="detail-stat">
+                <strong>∞</strong>
+                <span>
+                    RABBIT-HOLE<br>
+                    DESIGN DECISIONS
+                </span>
+            </div>
+
+            <div class="detail-note">
+                <strong>THE HARDEST PART</strong>
+
+                <p>
+                    The retractable cable spool. Getting the torsion spring
+                    system to reliably retract the cable while also making
+                    the release button dependable took the most iteration.
+                </p>
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PHOTO GALLERY
+        ====================================================== -->
+
+        <section class="gallery-section">
+
+            <div class="section-topline">
+                <span>04 / PROCESS & DETAILS</span>
+
+                <span>
+                    <span id="galleryNumber">01</span> /
+                    <span id="galleryTotal">07</span>
+                </span>
+            </div>
+
+
+            <div class="gallery">
+
+                <button
+                    class="gallery-arrow gallery-left"
+                    id="galleryPrev"
+                    aria-label="Previous image">
+                    ←
+                </button>
+
+
+                <div class="gallery-image-wrap">
+
+                    <img
+                        id="galleryImage"
+                        src="images/toolbox/gallery/toolbox-01.png"
+                        alt="Ultimate Custom Toolbox"
+                    >
+
+                    <div class="gallery-caption" id="galleryCaption">
+                        CUSTOM INTERIOR LAYOUT
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="gallery-arrow gallery-right"
+                    id="galleryNext"
+                    aria-label="Next image">
+                    →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>
+            NATHAN LANDIG / 2026
+        </span>
+
+        <div>
+            <a href="mailto:YOUR_EMAIL_HERE">
+                EMAIL ↗
+            </a>
+
+            <a
+                href="resume/Nate_Landig_Resume.pdf"
+                download>
+                RESUME ↗
+            </a>
+        </div>
+
+    </footer>
+
+
+    <script src="toolbox.js"></script>
+
+</body>
+</html>

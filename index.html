@@ -1,63 +1,441 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>Nate Landig | Mechanical Engineering Portfolio</title>
+    <title>Nate Landig | Mechanical Engineering Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
-```
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-```
-<main class="home">
 
-    <header class="header">
-        <h1>NATE LANDIG</h1>
-        <p>Mechanical Engineering • Design • Making</p>
-    </header>
+    <!-- =====================================
+         HERO
+         ===================================== -->
 
-    <section class="projects">
+    <section class="hero">
 
-        <a href="#" class="project-bubble bubble-starx">
-            <span>STARX</span>
-            <small>Powered Exoskeleton</small>
-        </a>
+        <header class="top-bar">
 
-        <a href="#" class="project-bubble bubble-guitar">
-            <span>GUITAR</span>
-            <small>Instrument Projects</small>
-        </a>
+            <div class="label">
+                NATHAN LANDIG / PORTFOLIO
+            </div>
 
-        <a href="#" class="project-bubble bubble-robotics">
-            <span>ROBOTICS</span>
-            <small>Mechanical Design</small>
-        </a>
+            <div class="date">
+                2026
+            </div>
 
-        <a href="#" class="project-bubble bubble-projects">
-            <span>PROJECTS</span>
-            <small>More Things I've Built</small>
-        </a>
+        </header>
+
+
+        <div class="hero-layout">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-left">
+
+                <div class="hero-text">
+
+                    <h1>Nate Landig</h1>
+
+                    <p>
+                        mechanical engineer / designer / tinkerer / purveyor of cool things
+                    </p>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="button">
+                        Selected work ↗
+                    </a>
+
+                    <a href="#about" class="button">
+                        About Nathan ↗
+                    </a>
+
+                    <a href="other.html" class="button">
+                        Other stuff ↗
+                    </a>
+
+                    <a href="mailto:YOUR_EMAIL_HERE" class="button">
+                        Say hello ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+           <!-- RIGHT SIDE — FEATURED TOOLBOX -->
+            <div class="featured-project">
+
+                <div class="featured-viewer">
+
+                    <div class="featured-glow"></div>
+
+                    <img
+                        id="homeViewer"
+                        src="images/toolbox/360/pano-01.png"
+                        alt="Ultimate Custom Toolbox"
+                    >
+
+                    <div class="viewer-hint">
+                        DRAG TO ROTATE ↔
+                    </div>
+
+                </div>
+
+                <a href="toolbox.html" class="featured-description">
+
+                    <h2>
+                        ULTIMATE CUSTOM TOOLBOX
+                    </h2>
+
+                    <p>
+                        A fully customized mobile workshop with
+                        integrated electrical components and dedicated
+                        storage for every tool I use.
+                    </p>
+
+                    <span class="featured-arrow">↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
 
     </section>
 
-    <nav class="navigation">
-        <a href="#">ABOUT</a>
-        <a href="#">RESUME</a>
-        <a href="#">CONTACT</a>
-    </nav>
 
-</main>
 
-<script src="script.js"></script>
-```
+    <!-- =====================================
+         PROJECTS
+         ===================================== -->
+
+    <main id="projects" class="projects-section">
+
+        <div class="section-heading">
+
+            <h2>SELECTED BUILDS</h2>
+
+            <span>01—12</span>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- 01 TOOLBOX -->
+
+            <a href="toolbox.html" id="toolbox" class="project-card featured">
+
+                <div class="project-meta">
+                    01 / 2026 / 360 VIEW · ELECTRICAL
+                </div>
+
+                <h3>
+                    ULTIMATE CUSTOM TOOLBOX
+                </h3>
+
+                <div class="project-image">
+                    <img
+                        src="images/toolbox/gallery/toolbox-03.png"
+                        alt="Ultimate Custom Toolbox"
+                    >
+                </div>
+
+            </a>
+
+
+            <!-- 02 BASEMENT -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    02 / ONGOING / CAD · WOODWORK
+                </div>
+
+                <h3>
+                    BASEMENT SHELVING SYSTEM
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 03 STARX -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    03 / ONGOING / ROBOTICS · MECHANISMS
+                </div>
+
+                <h3>
+                    STARX 2027X EXOSKELETON
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 04 BLUELAB -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    04 / ONGOING / ASSISTIVE · CAD
+                </div>
+
+                <h3>
+                    BLUElab EASE LUNCH TRAY HOLDER
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 05 HEADPHONE CASES -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    05 / 2025 / 3D PRINTING · LATCHES
+                </div>
+
+                <h3>
+                    CUSTOM HEADPHONES + MOUSE CASES
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 06 FRC 2024 -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    06 / 2024 / ROBOTICS · MECHANISMS
+                </div>
+
+                <h3>
+                    FRC ROBOTICS — 2024 SEASON
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 07 NOVA STELLA -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    07 / 2023 / ELECTRICAL · GUITAR
+                </div>
+
+                <h3>
+                    NOVA STELLA CUSTOM STRAT
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 08 MUTE JAMMER -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    08 / 2022 / INVENTION · PITCH WINNER
+                </div>
+
+                <h3>
+                    "MUTE JAMMER" GUITAR KILL SWITCH
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 09 PEDALBOARD -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    09 / 2022 / CNC · WOODWORK
+                </div>
+
+                <h3>
+                    CUSTOM GUITAR PEDALBOARD
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 10 3D PRINTING MYSELF -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    10 / 2022 / 3D SCAN · 360 VIEW
+                </div>
+
+                <h3>
+                    3D PRINTING MYSELF
+                </h3>
+
+                <div class="project-image">
+                    <span>360° OBJECT VIEWER</span>
+                </div>
+
+            </a>
+
+
+            <!-- 11 FRC 2023 -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    11 / 2023 / ROBOTICS · FABRICATION
+                </div>
+
+                <h3>
+                    FRC ROBOTICS — 2023 SEASON
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+            <!-- 12 AURORA -->
+
+            <a href="#" class="project-card">
+
+                <div class="project-meta">
+                    12 / 2020 / NL2 · ANIMATION
+                </div>
+
+                <h3>
+                    AURORA — ROLLER COASTER DESIGN
+                </h3>
+
+                <div class="project-image">
+                    <span>PROJECT IMAGE</span>
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         ABOUT
+         ===================================== -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-heading">
+
+            <h2>ABOUT</h2>
+
+            <span>13—14</span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h2>
+                Hi, I'm Nate!
+            </h2>
+
+            <p>
+                I'm a mechanical engineering and German student at the University of Michigan who likes making things, taking 
+                things apart, and generally finding excuses to build something cool. This site is a collection of the things 
+                I've made, designed, broken, fixed, photographed, and otherwise spent probably too much time thinking about. Enjoy!
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer id="contact">
+
+        <div>
+            NATHAN LANDIG / 2026
+        </div>
+
+        <div>
+
+            <a href="mailto:YOUR_EMAIL_HERE">
+                EMAIL ↗
+            </a>
+
+            <a href="resume/Nate_Landig_Resume.pdf" download>
+                RESUME ↗
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 

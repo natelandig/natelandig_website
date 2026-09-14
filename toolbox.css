@@ -1,0 +1,1015 @@
+:root {
+    --background: #071714;
+    --background-light: #0c211c;
+    --dark-teal: #102b25;
+
+    --orange: #ec6637;
+    --orange-dark: #c85a32;
+    --orange-light: #f47b4e;
+
+    --white: #e7e9de;
+    --muted: #aebbb4;
+
+    --border: rgba(231, 233, 222, 0.16);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 15%,
+            rgba(20, 67, 55, 0.22),
+            transparent 35%
+        ),
+        var(--background);
+
+    color: var(--white);
+
+    font-family: "Chakra Petch", sans-serif;
+
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    margin: 0 2.5vw;
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+
+.site-header a {
+    color: var(--orange);
+}
+
+
+.site-header a:hover {
+    color: var(--orange-light);
+}
+
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.back-link {
+    margin: 32px 2.5vw 10px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+
+    color: var(--orange);
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-hero {
+
+    margin: 0 2.5vw;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.75fr)
+        minmax(500px, 1.75fr);
+
+    min-height: 510px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* LEFT SIDE */
+
+.project-info {
+
+    padding: 30px 38px 35px 0;
+
+    border-right: 1px solid var(--border);
+}
+
+
+.project-meta {
+    margin-bottom: 17px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.project-info h1 {
+    margin: 0;
+
+    font-size: clamp(45px, 4vw, 66px);
+
+    line-height: 0.91;
+
+    letter-spacing: -0.045em;
+}
+
+
+.intro {
+    max-width: 310px;
+
+    margin-top: 25px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+
+    line-height: 1.65;
+
+    color: var(--white);
+}
+
+
+.project-specs {
+    max-width: 310px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.spec-row {
+    display: grid;
+
+    grid-template-columns: 105px 1fr;
+
+    margin-bottom: 10px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+
+.spec-row > span:first-child {
+    color: var(--muted);
+}
+
+
+
+/* =========================================================
+   360 VIEWER
+========================================================= */
+
+.viewer-column {
+
+    position: relative;
+
+    padding: 14px 0 35px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.viewer-counter {
+    position: absolute;
+
+    top: 15px;
+    right: 0;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+
+    z-index: 20;
+}
+
+
+.viewer-counter span {
+    color: var(--orange);
+}
+
+
+.viewer-stage {
+
+    position: relative;
+
+    height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/*
+===========================================================
+THE IMPORTANT GLOW
+===========================================================
+
+These are independent layers underneath the toolbox.
+
+The orange glow is intentionally large and soft.
+The green glow gives the background that subtle green
+halo visible in the reference image.
+*/
+
+.glow {
+    position: absolute;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+
+.glow-orange {
+
+    width: 62%;
+    height: 62%;
+
+    left: 19%;
+    top: 15%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(236, 102, 55, 0.48) 0%,
+            rgba(236, 102, 55, 0.28) 24%,
+            rgba(236, 102, 55, 0.12) 48%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+}
+
+
+.glow-green {
+
+    width: 85%;
+    height: 70%;
+
+    left: 7.5%;
+    top: 12%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(38, 91, 74, 0.35),
+            rgba(38, 91, 74, 0.12) 50%,
+            transparent 75%
+        );
+
+    filter: blur(45px);
+
+    z-index: 0;
+}
+
+
+/* Ground lighting */
+
+.ground-glow {
+
+    position: absolute;
+
+    width: 65%;
+    height: 17%;
+
+    left: 17.5%;
+    bottom: 19%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(236, 102, 55, 0.25),
+            transparent 70%
+        );
+
+    filter: blur(18px);
+
+    z-index: 2;
+}
+
+
+/* Actual 360 canvas */
+
+#viewer {
+
+    position: relative;
+
+    width: 88%;
+    height: 150%;
+
+    object-fit: contain;
+
+    z-index: 5;
+
+    cursor: grab;
+
+    /*
+    If your 360 images have transparent backgrounds,
+    this makes the toolbox itself glow.
+    */
+
+    filter:
+        drop-shadow(0 0 14px rgba(236, 102, 55, 0.20))
+        drop-shadow(0 18px 28px rgba(0, 0, 0, 0.40));
+}
+
+
+#viewer:active {
+    cursor: grabbing;
+}
+
+
+/* Ground ellipse */
+
+.ground-ring {
+
+    position: absolute;
+
+    width: 60%;
+    height: 18%;
+
+    left: 20%;
+    bottom: 18%;
+
+    border:
+
+        1px dashed
+        rgba(174, 187, 180, 0.28);
+
+    border-radius: 50%;
+
+    transform: perspective(300px) rotateX(65deg);
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+.drag-label {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: "Space Mono", monospace;
+    font-size: 7px;
+
+    color: var(--muted);
+
+    letter-spacing: 0.12em;
+
+    z-index: 10;
+
+    white-space: nowrap;
+}
+
+
+/* Viewer arrows */
+
+.viewer-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--orange);
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 15;
+
+    opacity: 0.8;
+}
+
+
+.viewer-arrow:hover {
+    opacity: 1;
+}
+
+
+.viewer-prev {
+    left: 3px;
+}
+
+
+.viewer-next {
+    right: 3px;
+}
+
+
+
+/* =========================================================
+   ORANGE PROJECT LABEL
+========================================================= */
+
+.viewer-project-label {
+
+    width: min(70%, 565px);
+
+    margin: 4px auto 0;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(
+        110deg,
+        var(--orange),
+        #f05c32
+    );
+
+    color: #101c18;
+
+    border-radius: 6px;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.viewer-project-label:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+
+.viewer-project-label span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.viewer-project-label strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    letter-spacing: 0.03em;
+}
+
+
+.viewer-project-label b {
+    font-size: 18px;
+}
+
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-grid {
+
+    margin: 0 2.5vw;
+
+    padding: 28px 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.story-block {
+
+    padding: 0 28px;
+
+    border-right: 1px solid var(--border);
+}
+
+
+.story-block:first-child {
+    padding-left: 0;
+}
+
+
+.story-block:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.story-heading {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+
+.story-heading span {
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--orange);
+
+    border-radius: 50%;
+
+    color: var(--orange);
+
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+}
+
+
+.story-heading h2 {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.story-block p {
+
+    margin: 0 0 13px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    line-height: 1.7;
+
+    color: #c5cec8;
+}
+
+
+.story-block ul {
+
+    margin: 0 0 13px;
+
+    padding-left: 15px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    line-height: 1.65;
+
+    color: #c5cec8;
+}
+
+
+.story-block li {
+    margin-bottom: 2px;
+}
+
+
+
+/* =========================================================
+   DETAIL STRIP
+========================================================= */
+
+.detail-strip {
+
+    margin: 0 2.5vw;
+
+    padding: 22px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        0.65fr
+        0.65fr
+        0.65fr
+        2fr;
+
+    gap: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.detail-stat {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.detail-stat strong {
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    color: var(--orange);
+}
+
+
+.detail-stat span {
+
+    font-family: "Space Mono", monospace;
+    font-size: 7px;
+
+    line-height: 1.4;
+
+    color: var(--muted);
+}
+
+
+.detail-note {
+
+    padding-left: 25px;
+
+    border-left: 1px solid var(--border);
+}
+
+
+.detail-note strong {
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    color: var(--orange);
+}
+
+
+.detail-note p {
+
+    max-width: 550px;
+
+    margin: 6px 0 0;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    color: var(--muted);
+}
+
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section {
+
+    margin: 0 2.5vw;
+
+    padding: 35px 0 70px;
+}
+
+
+.section-topline {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 13px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    color: var(--muted);
+
+    letter-spacing: 0.08em;
+}
+
+
+#galleryNumber {
+    color: var(--orange);
+}
+
+
+.gallery {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.gallery-image-wrap {
+
+    width: 82%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: var(--dark-teal);
+}
+
+
+.gallery-image-wrap img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 650px;
+
+    object-fit: cover;
+
+    transition: opacity 0.18s ease;
+}
+
+
+.gallery-caption {
+
+    position: absolute;
+
+    left: 15px;
+    bottom: 12px;
+
+    padding: 6px 9px;
+
+    background: rgba(7, 23, 20, 0.82);
+
+    border: 1px solid rgba(231, 233, 222, 0.15);
+
+    border-radius: 4px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 7px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.gallery-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: rgba(7, 23, 20, 0.7);
+
+    color: var(--orange);
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.gallery-arrow:hover {
+
+    background: var(--orange);
+
+    color: #101c18;
+}
+
+
+.gallery-left {
+    left: 2%;
+}
+
+
+.gallery-right {
+    right: 2%;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    margin: 0 2.5vw;
+
+    padding: 20px 0 25px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Space Mono", monospace;
+    font-size: 8px;
+
+    color: var(--muted);
+}
+
+
+footer div {
+    display: flex;
+    gap: 22px;
+}
+
+
+footer a {
+    color: var(--orange);
+}
+
+
+footer a:hover {
+    color: var(--orange-light);
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .project-hero {
+
+        grid-template-columns: 1fr;
+
+        min-height: 0;
+    }
+
+
+    .project-info {
+
+        padding: 25px 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    .project-info h1 {
+        font-size: 48px;
+    }
+
+
+    .viewer-column {
+
+        padding: 15px 0 30px;
+    }
+
+
+    .viewer-stage {
+        height: 350px;
+    }
+
+
+    .story-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .story-block,
+    .story-block:first-child,
+    .story-block:last-child {
+
+        padding: 0;
+
+        border-right: none;
+    }
+
+
+    .detail-strip {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .detail-note {
+
+        grid-column: 1 / -1;
+
+        padding-left: 0;
+        padding-top: 18px;
+
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+
+
+    .gallery-image-wrap {
+        width: 88%;
+    }
+
+
+    .gallery-image-wrap img {
+        height: 300px;
+    }
+
+
+    .gallery-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
