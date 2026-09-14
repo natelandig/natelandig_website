@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Other Stuff — Nathan Landig</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================
+           OTHER STUFF PAGE
+        ========================================= */
+
+        .other-page {
+            min-height: 100vh;
+            background: var(--background);
+        }
+
+        .other-header {
+            padding: 28px 4.5% 0;
+        }
+
+        .other-header-inner,
+        .other-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 38px;
+            color: var(--muted);
+            font-family: "Space Mono", monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--orange);
+        }
+
+        .other-title {
+            margin: 0 0 26px;
+            color: var(--white);
+            font-family: "Chakra Petch", sans-serif;
+            font-size: clamp(3rem, 7vw, 7rem);
+            font-weight: 800;
+            line-height: 0.88;
+            letter-spacing: -0.055em;
+        }
+
+        /* =========================================
+           TABS
+        ========================================= */
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 42px;
+        }
+
+        .tab-button {
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            padding: 11px 17px;
+            background: var(--card);
+            color: var(--muted);
+            cursor: pointer;
+
+            font-family: "Space Mono", monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .tab-button:hover {
+            background: var(--card-hover);
+            color: var(--white);
+        }
+
+        .tab-button.active {
+            border-color: var(--orange);
+            background: var(--orange);
+            color: #17231f;
+        }
+
+        .other-content {
+            padding: 0 4.5% 80px;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* =========================================
+           PHOTOGRAPHY
+        ========================================= */
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .photo-item {
+            position: relative;
+            aspect-ratio: 1 / 1;
+
+            padding: 0;
+            border: 0;
+            border-radius: 7px;
+            overflow: hidden;
+
+            background: var(--card);
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+
+            transition: transform 0.35s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.035);
+        }
+
+        /* =========================================
+           PHOTO LIGHTBOX
+        ========================================= */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: rgba(5, 13, 11, 0.94);
+
+            cursor: zoom-out;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox-image {
+            max-width: 94vw;
+            max-height: 90vh;
+
+            object-fit: contain;
+            border-radius: 5px;
+
+            cursor: default;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+
+            border: 0;
+            background: transparent;
+
+            color: var(--white);
+            cursor: pointer;
+
+            font-family: "Space Mono", monospace;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* =========================================
+           MUSIC
+        ========================================= */
+
+        .music-card {
+            max-width: 850px;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+            border-radius: 11px;
+
+            background: var(--card);
+        }
+
+        .music-meta {
+            margin-bottom: 13px;
+
+            color: var(--orange);
+
+            font-family: "Space Mono", monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .music-card h2 {
+            margin: 0 0 16px;
+
+            color: var(--white);
+
+            font-family: "Chakra Petch", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            font-weight: 800;
+            line-height: 0.95;
+        }
+
+        .music-card p {
+            max-width: 700px;
+            margin: 0 0 26px;
+
+            color: var(--muted);
+
+            font-family: "Space Mono", monospace;
+            font-size: 0.82rem;
+            line-height: 1.8;
+        }
+
+        .music-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .music-link {
+            display: inline-block;
+
+            border-radius: 6px;
+            padding: 11px 15px;
+
+            background: var(--orange);
+            color: #17231f;
+
+            font-family: "Space Mono", monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .music-link:hover {
+            background: var(--orange-hover);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 7px;
+            }
+
+            .other-title {
+                font-size: clamp(3rem, 15vw, 5rem);
+            }
+
+            .music-card {
+                padding: 23px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .other-header {
+                padding-top: 22px;
+            }
+
+            .other-content {
+                padding-bottom: 55px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="other-page">
+
+        <header class="other-header">
+
+            <div class="other-header-inner">
+
+                <a href="index.html" class="back-link">
+                    ← Back to selected work
+                </a>
+
+                <h1 class="other-title">
+                    OTHER STUFF
+                </h1>
+
+                <nav class="tabs" aria-label="Other stuff categories">
+
+                    <button
+                        class="tab-button active"
+                        type="button"
+                        data-tab="photography">
+                        Photography
+                    </button>
+
+                    <button
+                        class="tab-button"
+                        type="button"
+                        data-tab="music">
+                        Music
+                    </button>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <div class="other-content">
+
+            <!-- =====================================
+                 PHOTOGRAPHY
+            ====================================== -->
+
+            <section
+                class="tab-panel active"
+                id="photography">
+
+                <div
+                    class="photo-grid"
+                    id="photoGrid">
+
+                    <!-- Photos are generated automatically during deployment -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 MUSIC
+            ====================================== -->
+
+            <section
+                class="tab-panel"
+                id="music">
+
+                <div class="music-card">
+
+                    <div class="music-meta">
+                        02 / MUSIC
+                    </div>
+
+                    <h2>
+                        A few things<br>
+                        I've made.
+                    </h2>
+
+                    <p>
+                        I've been playing guitar for years and have spent a
+                        fair amount of time messing around with recording
+                        and making music. These are a couple of projects
+                        that actually made it onto streaming services.
+                        There's also a solo project in the works... eventually.
+                    </p>
+
+                    <div class="music-links">
+
+                        <a
+                            href="https://open.spotify.com/track/2iGQ2DzQi0pbAk6geScLeJ?si=1f49b39321544087"
+                            class="music-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Yellow Jellyfish ↗
+                        </a>
+
+                        <a
+                            href="https://open.spotify.com/artist/2Mowykwd8xOj7GzNqYR3Rf?si=BMGzbibMToWI9t_0qdPIZg"
+                            class="music-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Seventh Street ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         PHOTO LIGHTBOX
+    ========================================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true">
+
+        <button
+            class="lightbox-close"
+            type="button"
+            aria-label="Close photo">
+            ×
+        </button>
+
+        <img
+            class="lightbox-image"
+            id="lightboxImage"
+            src=""
+            alt="">
+
+    </div>
+
+
+    <script>
+
+        /* =====================================
+           TAB SWITCHING
+        ====================================== */
+
+        const tabButtons =
+            document.querySelectorAll(".tab-button");
+
+        const tabPanels =
+            document.querySelectorAll(".tab-panel");
+
+
+        tabButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const target =
+                    button.dataset.tab;
+
+                tabButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                tabPanels.forEach(panel => {
+                    panel.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                document
+                    .getElementById(target)
+                    .classList.add("active");
+
+            });
+
+        });
+
+
+        /* =====================================
+           PHOTO LIGHTBOX
+        ====================================== */
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const closeButton =
+            document.querySelector(".lightbox-close");
+
+
+        document
+            .getElementById("photoGrid")
+            .addEventListener("click", event => {
+
+                const photo =
+                    event.target.closest(".photo-item");
+
+                if (!photo) return;
+
+                const image =
+                    photo.querySelector("img");
+
+                lightboxImage.src =
+                    image.src;
+
+                lightboxImage.alt =
+                    image.alt;
+
+                lightbox.classList.add("open");
+
+                lightbox.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.style.overflow =
+                    "hidden";
+
+            });
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove("open");
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        closeButton.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            event => {
+
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
