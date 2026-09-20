@@ -1,0 +1,8 @@
+.git
+.git/**
+.gitignore
+generate_photos.py
+wrangler.toml
+wrangler.json
+wrangler.jsonc
+README.md
