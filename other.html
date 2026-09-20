@@ -24,8 +24,21 @@
             background: var(--background);
         }
 
-        .other-header {
+        .other-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 28px 4.5% 0;
+            font-family: "Space Mono", monospace;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .other-top-bar .date { color: var(--orange); }
+
+        .other-header {
+            padding: 30px 4.5% 0;
         }
 
         .other-header-inner,
@@ -39,7 +52,7 @@
             margin-bottom: 38px;
             color: var(--muted);
             font-family: "Space Mono", monospace;
-            font-size: 0.72rem;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.08em;
             text-decoration: none;
@@ -56,9 +69,9 @@
             color: var(--white);
             font-family: "Chakra Petch", sans-serif;
             font-size: clamp(3rem, 7vw, 7rem);
-            font-weight: 800;
+            font-weight: 700;
             line-height: 0.88;
-            letter-spacing: -0.055em;
+            letter-spacing: -0.05em;
         }
 
         /* =========================================
@@ -73,14 +86,14 @@
 
         .tab-button {
             border: 1px solid var(--border);
-            border-radius: 7px;
-            padding: 11px 17px;
+            border-radius: 20px;
+            padding: 7px 14px;
             background: var(--card);
             color: var(--muted);
             cursor: pointer;
 
             font-family: "Space Mono", monospace;
-            font-size: 0.72rem;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.04em;
             text-transform: uppercase;
@@ -318,6 +331,11 @@
 
     <main class="other-page">
 
+        <div class="other-top-bar">
+            <div>NATHAN LANDIG / PORTFOLIO</div>
+            <div class="date">2026</div>
+        </div>
+
         <header class="other-header">
 
             <div class="other-header-inner">
@@ -426,6 +444,14 @@
             </section>
 
         </div>
+
+        <footer>
+            <div>NATHAN LANDIG / 2026</div>
+            <div>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=landig@umich.edu" target="_blank" rel="noopener noreferrer">EMAIL ↗</a>
+                <a href="resume/Nate_Landig_Resume.pdf" download>RESUME ↗</a>
+            </div>
+        </footer>
 
     </main>
 

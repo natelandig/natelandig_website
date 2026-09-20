@@ -163,7 +163,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 9px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -227,7 +227,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 11px;
+    font-size: 13px;
 }
 
 
@@ -261,7 +261,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 8px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -412,7 +412,7 @@ a {
     color: #71351f;
 
     font-family: "Space Mono", monospace;
-    font-size: 7px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -428,7 +428,7 @@ a {
     margin-top: 7px;
 
     font-family: "Space Mono", monospace;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.5;
 
     opacity: 0.7;
@@ -509,7 +509,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 9px;
+    font-size: 12px;
 
     color: var(--muted);
 
@@ -564,7 +564,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 7px;
+    font-size: 12px;
 
     font-weight: 700;
 }
@@ -588,7 +588,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 8px;
+    font-size: 12px; /* CHANGES THE DESCRIPTION OF TOOLBOX TEXT SIZE*/
 
     line-height: 1.5;
 
@@ -635,7 +635,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
@@ -710,7 +710,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 7px;
+    font-size: 12px;
 
     font-weight: 700;
 }
@@ -780,7 +780,7 @@ a {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 8px;
+    font-size: 12px;
 
     opacity: 0.35;
 }
@@ -848,7 +848,7 @@ footer {
 
     font-family: "Space Mono", monospace;
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
