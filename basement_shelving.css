@@ -359,7 +359,7 @@ footer {
     align-items: center;
     font-family: "Space Mono", monospace;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.08em;
     color: var(--muted);
 }

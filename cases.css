@@ -1,16 +1,15 @@
 :root {
     --background: #0c1c18;
-    --background-light: #142a25;
     --dark-teal: #142a25;
     --card: #203a34;
     --card-hover: #29463f;
 
     --orange: #ec6637;
-    --orange-dark: #c85a32;
     --orange-light: #f17445;
 
     --white: #e7e9de;
     --muted: #aebbb4;
+
     --border: rgba(231, 233, 222, 0.16);
 }
 
@@ -24,6 +23,7 @@ html {
 
 body {
     margin: 0;
+
     background:
         radial-gradient(
             circle at 70% 15%,
@@ -31,7 +31,9 @@ body {
             transparent 35%
         ),
         var(--background);
+
     color: var(--white);
+
     font-family: "Chakra Petch", sans-serif;
     font-size: 13px;
     line-height: 1.45;
@@ -44,11 +46,12 @@ a {
 
 /* HEADER */
 .site-header {
-    margin: 0;
     padding: 28px 4.5% 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 700;
@@ -65,29 +68,39 @@ a {
 
 .back-link {
     margin: 32px 4.5% 10px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
+
     color: var(--orange);
 }
 
 /* HERO */
 .project-hero {
     margin: 0 4.5vw;
+
     display: grid;
-    grid-template-columns: minmax(280px, 0.82fr) minmax(500px, 1.68fr);
-    min-height: 560px;
+
+    grid-template-columns:
+        minmax(280px, 0.82fr)
+        minmax(500px, 1.68fr);
+
+    min-height: 545px;
+
     border-bottom: 1px solid var(--border);
 }
 
 .project-info {
     padding: 30px 38px 35px 0;
+
     border-right: 1px solid var(--border);
 }
 
 .project-meta {
     margin-bottom: 17px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -95,14 +108,17 @@ a {
 
 .project-info h1 {
     margin: 0;
-    font-size: clamp(43px, 4vw, 66px);
+
+    font-size: clamp(40px, 4vw, 62px);
     line-height: 0.91;
     letter-spacing: -0.045em;
 }
 
 .intro {
     max-width: 350px;
+
     margin-top: 25px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     line-height: 1.65;
@@ -110,15 +126,19 @@ a {
 
 .project-specs {
     max-width: 350px;
+
     margin-top: 25px;
     padding-top: 20px;
+
     border-top: 1px solid var(--border);
 }
 
 .spec-row {
     display: grid;
     grid-template-columns: 105px 1fr;
+
     margin-bottom: 10px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     line-height: 1.5;
@@ -128,10 +148,12 @@ a {
     color: var(--muted);
 }
 
-/* HERO IMAGE */
+/* HERO SWAP */
 .hero-visual {
     position: relative;
+
     padding: 14px 0 35px 35px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,79 +161,164 @@ a {
 
 .visual-meta {
     position: absolute;
+
     top: 15px;
     right: 0;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     letter-spacing: 0.08em;
+
     color: var(--muted);
 }
 
-.hero-image-stage {
+.hero-swap {
     position: relative;
-    height: 390px;
+
+    height: 385px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
 }
 
 .glow {
     position: absolute;
+
     pointer-events: none;
+
     border-radius: 50%;
 }
 
 .glow-orange {
-    width: 55%;
-    height: 64%;
-    left: 22.5%;
-    top: 16%;
-    background: radial-gradient(
-        ellipse,
-        rgba(236, 102, 55, 0.38) 0%,
-        rgba(236, 102, 55, 0.16) 40%,
-        transparent 74%
-    );
+    width: 62%;
+    height: 60%;
+
+    left: 19%;
+    top: 17%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(236, 102, 55, 0.38) 0%,
+            rgba(236, 102, 55, 0.15) 40%,
+            transparent 74%
+        );
+
     filter: blur(40px);
 }
 
 .glow-green {
-    width: 80%;
+    width: 82%;
     height: 82%;
-    left: 10%;
+
+    left: 9%;
     top: 8%;
-    background: radial-gradient(
-        ellipse,
-        rgba(38, 91, 74, 0.34),
-        rgba(38, 91, 74, 0.10) 52%,
-        transparent 76%
-    );
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(38, 91, 74, 0.34),
+            rgba(38, 91, 74, 0.10) 52%,
+            transparent 76%
+        );
+
     filter: blur(46px);
 }
 
 .hero-image {
-    position: relative;
+    position: absolute;
+
     z-index: 2;
-    width: 92%;
-    height: 98%;
+
+    width: 94%;
+    height: 92%;
+
     object-fit: contain;
+
+    opacity: 0;
+
+    transform: scale(0.985);
+
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease;
+
     filter:
-        drop-shadow(0 0 15px rgba(236, 102, 55, 0.12))
-        drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35));
+        drop-shadow(
+            0 0 15px
+            rgba(236, 102, 55, 0.12)
+        )
+        drop-shadow(
+            0 18px 28px
+            rgba(0, 0, 0, 0.35)
+        );
+}
+
+.hero-image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swap-button {
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    z-index: 5;
+
+    padding: 7px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--orange);
+
+    color: #17231f;
+
+    cursor: pointer;
+
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.swap-button:hover {
+    transform: translateY(-2px);
+    background: var(--white);
 }
 
 .project-label {
     width: min(72%, 590px);
+
     margin: 4px auto 0;
     padding: 12px 16px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(110deg, var(--orange), #f05c32);
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--orange),
+            #f05c32
+        );
+
     color: #101c18;
+
     border-radius: 6px;
-    transition: transform 0.2s ease, filter 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
 }
 
 .project-label:hover {
@@ -221,7 +328,9 @@ a {
 
 .project-label span {
     display: block;
+
     margin-bottom: 4px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 700;
@@ -229,6 +338,7 @@ a {
 
 .project-label strong {
     display: block;
+
     font-size: 14px;
     letter-spacing: 0.03em;
 }
@@ -240,14 +350,20 @@ a {
 /* STORY */
 .story-grid {
     margin: 0 4.5vw;
+
     padding: 32px 0 34px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     border-bottom: 1px solid var(--border);
 }
 
 .story-block {
     padding: 0 30px;
+
     border-right: 1px solid var(--border);
 }
 
@@ -263,46 +379,59 @@ a {
 .story-heading {
     display: flex;
     align-items: center;
+
     gap: 12px;
+
     margin-bottom: 16px;
 }
 
 .story-heading span {
     width: 36px;
     height: 36px;
+
     flex: 0 0 36px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: 1px solid var(--orange);
     border-radius: 50%;
+
     color: var(--orange);
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
 }
 
 .story-heading h2 {
     margin: 0;
+
     font-size: 15px;
     letter-spacing: 0.08em;
 }
 
 .story-block p {
     margin: 0 0 14px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     line-height: 1.75;
+
     color: #c5cec8;
 }
 
-/* SHARED SECTION TOPLINE */
+/* SHARED TOPLINE */
 .section-topline {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding-bottom: 10px;
     margin-bottom: 18px;
+
     border-bottom: 1px solid var(--border);
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 700;
@@ -313,79 +442,47 @@ a {
     color: var(--orange);
 }
 
-/* DESIGN PRIORITIES */
-.feature-section {
+/* DETAILS */
+.detail-section,
+.cad-section {
     margin: 0 4.5vw;
+
     padding: 28px 0 34px;
-    border-bottom: 1px solid var(--border);
-}
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 9px;
-}
-
-.feature-card {
-    min-height: 260px;
-    padding: 18px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 11px;
-}
-
-.feature-number {
-    display: block;
-    margin-bottom: 30px;
-    color: var(--orange);
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.feature-card h2 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.04em;
-}
-
-.feature-card p {
-    margin: 0;
-    color: #c5cec8;
-    font-family: "Space Mono", monospace;
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-/* DESIGN DETAILS */
-.detail-section {
-    margin: 0 4.5vw;
-    padding: 28px 0 34px;
     border-bottom: 1px solid var(--border);
 }
 
 .detail-grid {
     display: grid;
-    grid-template-columns: 1.25fr 1fr 1fr;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 10px;
 }
 
-.detail-card {
+.detail-card,
+.cad-card {
     margin: 0;
     padding: 10px;
+
     background: var(--card);
+
     border: 1px solid var(--border);
     border-radius: 11px;
 }
 
 .image-stage {
-    height: 360px;
+    height: 320px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
+
     border-radius: 6px;
+
     background:
         radial-gradient(
             ellipse at 50% 50%,
@@ -395,67 +492,59 @@ a {
         #19332d;
 }
 
-.cad-stage img {
+.image-stage img {
     width: 96%;
     height: 96%;
+
     object-fit: contain;
-    filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
+
+    filter:
+        drop-shadow(
+            0 14px 24px
+            rgba(0, 0, 0, 0.28)
+        );
 }
 
 .detail-card figcaption,
-.photo-card figcaption {
+.cad-card figcaption {
     padding: 11px 2px 2px;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06em;
+
     color: var(--muted);
 }
 
-/* FABRICATION / TEAM GALLERY */
-.gallery-section {
-    margin: 0 4.5vw;
-    padding: 28px 0 46px;
-    border-bottom: 1px solid var(--border);
-}
-
-.photo-grid {
+/* CAD */
+.cad-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
     gap: 10px;
 }
 
-.photo-card {
-    margin: 0;
-    padding: 10px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 11px;
-}
-
-.photo-card img {
-    display: block;
-    width: 100%;
-    height: 390px;
-    object-fit: contain;
-    border-radius: 6px;
-    background: #19332d;
-}
-
-.team-card img {
-    object-fit: cover;
+.cad-stage {
+    height: 360px;
 }
 
 /* FOOTER */
 footer {
     padding: 28px 4.5% 34px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.08em;
+
     color: var(--muted);
 }
 
@@ -472,38 +561,18 @@ footer a:hover {
     color: var(--white);
 }
 
-/* MOBILE */
-@media (max-width: 1050px) {
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .detail-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .detail-card:first-child {
-        grid-column: 1 / -1;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .team-card {
-        grid-column: 1 / -1;
-    }
-}
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
+
     .project-hero {
         grid-template-columns: 1fr;
     }
 
     .project-info {
+        padding-right: 0;
+
         border-right: none;
         border-bottom: 1px solid var(--border);
-        padding-right: 0;
     }
 
     .hero-visual {
@@ -512,7 +581,9 @@ footer a:hover {
 
     .visual-meta {
         position: static;
+
         margin-bottom: 8px;
+
         text-align: right;
     }
 
@@ -522,6 +593,7 @@ footer a:hover {
 
     .story-block {
         padding: 26px 0;
+
         border-right: none;
         border-bottom: 1px solid var(--border);
     }
@@ -532,43 +604,56 @@ footer a:hover {
 
     .story-block:last-child {
         padding-bottom: 0;
+
         border-bottom: none;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-card:first-child {
+        grid-column: 1 / -1;
     }
 }
 
 @media (max-width: 650px) {
+
     .site-header,
     footer {
         gap: 18px;
     }
 
     .project-info h1 {
-        font-size: clamp(38px, 12.5vw, 56px);
+        font-size:
+            clamp(
+                36px,
+                11.5vw,
+                52px
+            );
     }
 
-    .hero-image-stage {
-        height: 320px;
+    .hero-swap {
+        height: 310px;
     }
 
     .project-label {
         width: 100%;
     }
 
-    .feature-grid,
     .detail-grid,
-    .photo-grid {
+    .cad-grid {
         grid-template-columns: 1fr;
     }
 
-    .detail-card:first-child,
-    .team-card {
+    .detail-card:first-child {
         grid-column: auto;
     }
 
     .image-stage,
-    .photo-card img {
+    .cad-stage {
         height: auto;
-        min-height: 260px;
+        min-height: 250px;
         max-height: 70vh;
     }
 
