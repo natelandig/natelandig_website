@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>FRC Team 2022 — 2023 Season — Nathan Landig</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="frc2023.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>NATHAN LANDIG / PORTFOLIO</div>
+  <a href="index.html">BACK TO HOME ↗</a>
+</header>
+
+<main>
+<div class="back-link"><a href="index.html#projects">← &nbsp;ALL BUILDS</a></div>
+
+<section class="project-hero">
+  <div class="project-info">
+    <div class="project-meta">11 / 2023 / ROBOTICS · FABRICATION</div>
+    <h1>FRC TEAM 2022<br>2023 SEASON<br>/ GRAVITY CLAW</h1>
+    <p class="intro">
+      The most important failure of my early engineering career: a mechanically ambitious
+      intake system that taught me more about scope, integration, iteration, and
+      design-for-manufacturing than any project that simply worked the first time.
+    </p>
+    <div class="project-specs">
+      <div class="spec-row"><span>TEAM</span><span>FRC Team 2022 — Illinois Math and Science Academy</span></div>
+      <div class="spec-row"><span>ROLE</span><span>Design-Integration / Driver</span></div>
+      <div class="spec-row"><span>FOCUS</span><span>CAD, Linkages,<br>Integration, Prototyping,<br>Design for Manufacturing</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="visual-meta">MASTER ASSEMBLY / DESIGN INTENT</div>
+    <div class="hero-image-stage">
+      <div class="glow glow-orange"></div>
+      <div class="glow glow-green"></div>
+      <img src="images/frc2023/frc2023-01.png"
+           alt="Master CAD assembly showing telescoping arm extension and gravity claw"
+           class="hero-image">
+    </div>
+    <a href="#details" class="project-label">
+      <div>
+        <span>11 / DESIGN · FAILURE · ITERATION</span>
+        <strong>FRC 2023 — GRAVITY CLAW</strong>
+      </div>
+      <b>↗</b>
+    </a>
+  </div>
+</section>
+
+<section id="details" class="story-grid">
+  <article class="story-block">
+    <div class="story-heading"><span>01</span><h2>NEW TO DESIGN-INTEGRATION</h2></div>
+    <p>
+      This was my junior year and my first season on Design-Integration, the subteam
+      responsible for CAD and design work for the mechanical team. I had just earned
+      my CSWA certification and was eager to use SolidWorks on a full robot.
+    </p>
+    <p>
+      The team had also just gone through a major leadership restructuring, and DI
+      was extremely disorganized. I was assigned ownership of the mechanism that
+      would collect and outtake cones and inflatable cubes.
+    </p>
+  </article>
+
+  <article class="story-block">
+    <div class="story-heading"><span>02</span><h2>THE GRAVITY CLAW IDEA</h2></div>
+    <p>
+      After a design discussion that was far too short, we settled on a claw.
+      My concept used freely rotating claw pads so a cone could automatically rotate
+      with its heavier base downward before being deposited.
+    </p>
+    <p>
+      That gravity-driven self-orientation is where the mechanism got its name:
+      the Gravity Claw.
+    </p>
+  </article>
+
+  <article class="story-block">
+    <div class="story-heading"><span>03</span><h2>ITERATION UNDER PRESSURE</h2></div>
+    <p>
+      The first prototype opened like a cymbal monkey toy: each arm pivoted about
+      one axis, the two sides were synchronized by meshing gears, and pneumatic pistons
+      powered the motion.
+    </p>
+    <p>
+      It opened and closed as expected, but angular misalignment of the pads ruined
+      the gravity-rotation effect. That failure pushed the design toward four-bar
+      linkages to keep the contact surfaces aligned.
+    </p>
+  </article>
+</section>
+
+<section class="prototype-section">
+  <div class="section-topline">
+    <span>04 / GRAVITY CLAW EVOLUTION</span>
+    <span>V1 → V2 → FINAL MODULE</span>
+  </div>
+
+  <div class="prototype-grid">
+    <figure class="prototype-card">
+      <div class="image-stage">
+        <img src="images/frc2023/frc2023-08.png" alt="CAD of first gravity claw prototype">
+      </div>
+      <figcaption>V1 / GEARED SINGLE-PIVOT CLAW</figcaption>
+    </figure>
+
+    <figure class="prototype-card">
+      <div class="image-stage photo-stage">
+        <img src="images/frc2023/frc2023-12.jpg"
+             alt="Built first gravity claw prototype with a cone on top and a face drawn on it">
+      </div>
+      <figcaption>V1 PHYSICAL PROTOTYPE / WITH SOME PERSONALITY</figcaption>
+    </figure>
+
+    <div class="toggle-card">
+      <div class="toggle-header">
+        <span>V2 / FOUR-BAR CLAW</span>
+        <button type="button" id="v2Toggle">SHOW CLOSED ↔</button>
+      </div>
+      <div class="toggle-stage top-middle" id="v2Stage">
+        <img src="images/frc2023/frc2023-06.png" alt="Second generation gravity claw opened" class="toggle-image v2-open active">
+        <img src="images/frc2023/frc2023-07.png" alt="Second generation gravity claw closed" class="toggle-image v2-closed">
+      </div>
+      <p class="toggle-caption">The four-bar linkage fixed pad alignment, but this version was far too bulky.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-claw-section">
+  <div class="section-topline">
+    <span>05 / FINAL GRAVITY CLAW</span>
+    <span>COMPACT CNC POLYCARBONATE MODULES</span>
+  </div>
+
+  <div class="final-claw-grid">
+    <div class="toggle-card">
+      <div class="toggle-header">
+        <span>FINAL MODULE / MOTION</span>
+        <button type="button" id="finalToggle">SHOW EXTENDED ↔</button>
+      </div>
+      <div class="toggle-stage top-right" id="finalStage">
+        <img src="images/frc2023/frc2023-04.png" alt="Final gravity claw module retracted" class="toggle-image final-retracted active">
+        <img src="images/frc2023/frc2023-05.png" alt="Final gravity claw module extended" class="toggle-image final-extended">
+      </div>
+      <p class="toggle-caption">
+        The final design split the claw into two independent CNC-machined polycarbonate four-bar modules.
+      </p>
+    </div>
+
+    <figure class="prototype-card">
+      <div class="image-stage">
+        <img src="images/frc2023/frc2023-02.png" alt="Angled CAD view of final gravity claw module">
+      </div>
+      <figcaption>FINAL MODULE / ANGLED CAD VIEW</figcaption>
+    </figure>
+
+    <figure class="prototype-card">
+      <div class="image-stage photo-stage">
+        <img src="images/frc2023/frc2023-13.jpg" alt="Physical final gravity claw module">
+      </div>
+      <figcaption>FINAL BUILT MODULE / CNC POLYCARBONATE</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="integration-section">
+  <div class="section-topline">
+    <span>06 / THE INTEGRATION PROBLEM</span>
+    <span>WHERE THE PROJECT LOST SCOPE</span>
+  </div>
+
+  <div class="integration-grid">
+    <div class="integration-copy">
+      <h2>THE CLAW WORKED. THE SYSTEM AROUND IT DIDN'T.</h2>
+      <p>
+        Other members of DI were designing the “slurper” intake and the mechanism
+        that would move my claw. The intended arm used two aluminum telescoping
+        stages pivoting from a raised, chain-driven axis.
+      </p>
+      <p>
+        Deep into build season, it became clear that both the slurper and the
+        telescoping “pink arm” were far beyond what our team could realistically
+        manufacture and integrate in time.
+      </p>
+      <p>
+        In the final week before competition, almost the entire concept was scrapped.
+        We kept the Gravity Claw and frantically built a simpler articulating arm
+        around it — so late that there was never even proper CAD of the competition configuration.
+      </p>
+    </div>
+
+    <figure class="integration-card">
+      <div class="image-stage tall-stage">
+        <img src="images/frc2023/frc2023-09.png"
+             alt="Assembly showing the scale of the second generation claw relative to the robot">
+      </div>
+      <figcaption>V2 CLAW / SCALE PROBLEM ON THE ROBOT</figcaption>
+    </figure>
+
+    <figure class="integration-card">
+      <div class="image-stage tall-stage">
+        <img src="images/frc2023/frc2023-10.png"
+             alt="Ideal CAD assembly with final gravity claw, slurper, and telescoping arm">
+      </div>
+      <figcaption>IDEALIZED FINAL CAD / NEVER BUILT AS SHOWN</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="competition-section">
+  <div class="section-topline">
+    <span>07 / COMPETITION REALITY</span>
+    <span>WHEN THE ROBOT BECAME SOMETHING ELSE</span>
+  </div>
+
+  <div class="competition-grid">
+    <div class="competition-copy">
+      <h2>THE MECHANISMS FAILED — SO WE CHANGED STRATEGY</h2>
+      <p>
+        I was the driver at both competitions, and it became obvious almost immediately
+        that our scoring mechanisms were not competition-ready. The claw and arm were
+        cumbersome to operate and broke after nearly every match.
+      </p>
+      <p>
+        Eventually we literally tied the arm down. But the rushed build had created
+        one accidental advantage: our robot was almost exactly the maximum permitted
+        size and weight.
+      </p>
+      <p>
+        In 2023, defense was highly viable. I learned to use the robot's mass aggressively,
+        pushing opponents away from scoring positions and turning a failed scoring robot
+        into an effective defensive machine.
+      </p>
+    </div>
+
+    <div class="competition-copy">
+      <h2>AN UNEXPECTED ENDGAME STRENGTH</h2>
+      <p>
+        Our programming captain added a wheel-locking function that rotated the swerve
+        modules into an X formation, making the robot extremely difficult to move.
+      </p>
+      <p>
+        The endgame required alliances to balance multiple robots on a table-sized seesaw.
+        We could balance, drive partially off the edge to clear room for our partners,
+        then lock the wheels and hang there without sliding off.
+      </p>
+      <p>
+        Despite the failed original design, our alliances reached the finals at both
+        competitions we attended. We lost both finals, but the season became unforgettable
+        for completely different reasons than we expected.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="learning-section">
+  <div class="section-topline">
+    <span>08 / WHAT I LEARNED</span>
+    <span>MY MOST IMPORTANT ENGINEERING FAILURE</span>
+  </div>
+
+  <div class="learning-grid">
+    <article class="learning-card">
+      <span>01</span>
+      <h2>SCOPE IS A DESIGN REQUIREMENT</h2>
+      <p>
+        A mechanism can be clever and still be the wrong design if the team cannot
+        manufacture, integrate, test, and repair it within the available time and resources.
+      </p>
+    </article>
+
+    <article class="learning-card">
+      <span>02</span>
+      <h2>CALL OUT PROBLEMS EARLY</h2>
+      <p>
+        Several warning signs were visible long before competition. I learned that
+        noticing a problem is not enough — engineers have to raise it, challenge assumptions,
+        and force difficult conversations before the schedule makes change impossible.
+      </p>
+    </article>
+
+    <article class="learning-card">
+      <span>03</span>
+      <h2>ITERATION BEATS ATTACHMENT</h2>
+      <p>
+        The Gravity Claw improved dramatically across three generations. Each failure
+        taught me something about alignment, packaging, linkages, integration, and
+        manufacturability that CAD alone could not.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="section-topline">
+    <span>09 / TEAM</span>
+    <span>FINALS AT BOTH EVENTS</span>
+  </div>
+
+  <figure class="team-card">
+    <img src="images/frc2023/frc2023-11.jpg"
+         alt="FRC Team 2022 group photo after reaching the finals at competition">
+    <figcaption>TEAM 2022 / COMPETITION FINALS</figcaption>
+  </figure>
+</section>
+
+</main>
+
+<footer>
+  <span>NATHAN LANDIG / 2026</span>
+  <div>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=landig@umich.edu"
+       target="_blank" rel="noopener noreferrer">EMAIL ↗</a>
+    <a href="resume/Nate_Landig_Resume.pdf" download>RESUME ↗</a>
+  </div>
+</footer>
+
+<script>
+const v2Button = document.getElementById("v2Toggle");
+const v2Open = document.querySelector(".v2-open");
+const v2Closed = document.querySelector(".v2-closed");
+let v2IsOpen = true;
+
+v2Button.addEventListener("click", () => {
+  v2IsOpen = !v2IsOpen;
+  v2Open.classList.toggle("active", v2IsOpen);
+  v2Closed.classList.toggle("active", !v2IsOpen);
+  v2Button.textContent = v2IsOpen ? "SHOW CLOSED ↔" : "SHOW OPEN ↔";
+});
+
+const finalButton = document.getElementById("finalToggle");
+const finalRetracted = document.querySelector(".final-retracted");
+const finalExtended = document.querySelector(".final-extended");
+let finalIsRetracted = true;
+
+finalButton.addEventListener("click", () => {
+  finalIsRetracted = !finalIsRetracted;
+  finalRetracted.classList.toggle("active", finalIsRetracted);
+  finalExtended.classList.toggle("active", !finalIsRetracted);
+  finalButton.textContent = finalIsRetracted ? "SHOW EXTENDED ↔" : "SHOW RETRACTED ↔";
+});
+</script>
+
+</body>
+</html>
